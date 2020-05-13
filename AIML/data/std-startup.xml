@@ -3,6 +3,7 @@
         <pattern>LOAD AIML B</pattern>
         <template>
             <learn>basic_chat.aiml</learn>
+            <learn>std-sales.aiml</learn>
         </template>
     </category>
 </aiml>

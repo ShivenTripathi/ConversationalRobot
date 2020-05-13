@@ -31,5 +31,18 @@
         </random>
     </template>
     </category>
-    
+
+    <category>
+    <pattern> MY NAME IS *</pattern>
+    <template>
+         Ok <set name="name"><star/></set>
+      </template>  
+   </category>  
+
+   <category>
+      <pattern>WHAT IS MY NAME</pattern>
+      <template>
+         Your name is <get name="name"/>.
+      </template>  
+   </category>  
 </aiml>
