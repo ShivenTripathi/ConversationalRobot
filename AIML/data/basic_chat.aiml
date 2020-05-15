@@ -16,6 +16,27 @@
     </category>
 
     <category>
+        <pattern>* PLACE ORDER *</pattern>
+        <template>
+            place
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CANCEL ORDER *</pattern>
+        <template>
+            cancel
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SHOW ORDER *</pattern>
+        <template>
+            show
+        </template>
+    </category>
+
+    <category>
     <pattern>ONE TIME I *</pattern>
     <template>
         <random>
