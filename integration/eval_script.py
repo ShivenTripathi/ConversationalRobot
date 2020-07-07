@@ -176,11 +176,18 @@ def responder(input_raw):
     print("---------------------------------------------")
     output_beams_per_sample = predictions[0,:,:]
     score_beams_per_sample = beam_scores[0,:,:]
+    best_response=""
+    least_score=1000
     for beam, score in zip(output_beams_per_sample,score_beams_per_sample) :
         seq = list(itertools.takewhile( lambda index: index !=2, beam))
         score_indexes = np.arange(len(seq))
         beam_score = score[score_indexes].sum()
-        print(" ".join( [Y_tokenizer.index_word[w] for w in seq]), " beam score: ", beam_score)
+        response = " ".join( [Y_tokenizer.index_word[w] for w in seq])
+        print(response, " beam score: ", beam_score)
+        if beam_score<least_score:
+            least_score=beam_score
+            best_response= response
+    return best_response    
 
 import speech_recognition as sr  
 
@@ -200,9 +207,26 @@ def speechInput():
     except sr.RequestError as e:  
         print("Recog error; {0}".format(e))  
 
+from gtts import gTTS
+from time import sleep
+import os
+import pyglet
+
+def speakResponse(response):
+    tts = gTTS(text=response, lang='en')
+    filename = '/tmp/temp.mp3'
+    tts.save(filename)
+
+    music = pyglet.media.load(filename, streaming=False)
+    music.play()
+
+    sleep(music.duration) 
+    os.remove(filename) 
+
 while input("Continue?(y/n)") is 'y':
     speech=speechInput()
-    responder(speech)
+    response=responder(speech)
+    speakResponse(response)
 
 
 
