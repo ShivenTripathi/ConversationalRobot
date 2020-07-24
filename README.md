@@ -41,7 +41,7 @@ Install the required dependencies :
 
 ```
 $ cd ConversationalRobot/integration
-$pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 Download the model weights and parameters from [here](https://drive.google.com/drive/folders/1PyIluEr6xfpBJhrqQXDzT-xEVn6e-Xxo?usp=sharing).
 
@@ -49,7 +49,7 @@ Download the model weights and parameters from [here](https://drive.google.com/d
 ```
 usage: eval_script.py
 ```
-The bot starts up and begins accepting speach input.
+The bot starts up and begins accepting speech input.
 
 ### Documentation
 
