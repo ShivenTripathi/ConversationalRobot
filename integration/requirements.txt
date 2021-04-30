@@ -143,7 +143,7 @@ rqt-tf-tree==0.6.0
 rqt-top==0.4.8
 rqt-topic==0.4.11
 rqt-web==0.4.8
-rsa==4.0
+rsa==4.7
 rviz==1.12.17
 scikit-learn @ file:///tmp/build/80754af9/scikit-learn_1592502882723/work
 scipy @ file:///tmp/build/80754af9/scipy_1592930540905/work
