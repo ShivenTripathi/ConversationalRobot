@@ -156,7 +156,7 @@ soupsieve==2.0.1
 SpeechRecognition==3.6.3
 tensorboard==2.2.1
 tensorboard-plugin-wit==1.6.0
-tensorflow==2.2.0
+tensorflow==2.5.3
 tensorflow-addons==0.10.0
 tensorflow-estimator==2.2.0
 termcolor==1.1.0
