@@ -11,7 +11,7 @@ cachetools==4.1.0
 camera-calibration==1.12.23
 camera-calibration-parsers==1.11.13
 catkin==0.7.20
-certifi==2020.6.20
+certifi==2022.12.7
 cffi==1.14.0
 chardet==3.0.4
 click==7.1.2
